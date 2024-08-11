@@ -8,8 +8,8 @@
   - 고객 서비스 Flow 작성(비즈니스 프로세스. 반드시 사람이 포함됨)
 ### 2. Diagram 활용 상세화
   - Context diagram: Big picture이므로 가능한 간단히 핵심을 추상적으로 표현한다.
-			- 연결선은 데이터로 식별됨(엔터티 식별) ==> ERD로 진행 가능
-			- 범위를 식별하기 위한 다이어그램
+  	- 연결선은 데이터로 식별됨(엔터티 식별) ==> ERD로 진행 가능
+	- 범위를 식별하기 위한 다이어그램
   - Entity Relation Diagram
   - Data Flow Diagram
   - Work flow(flowchart)
