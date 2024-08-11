@@ -1,3 +1,8 @@
+### 0. Azure 컴퓨팅 서비스 선택
+![image](https://github.com/user-attachments/assets/a688b2cc-2747-4b22-85f5-32b24ba2a7ee)
+Link: https://learn.microsoft.com/ko-kr/azure/architecture/guide/technology-choices/compute-decision-tree
+
+
 ### 1. Java용 신뢰할 수 있는 웹앱 패턴
 - https://learn.microsoft.com/ko-kr/azure/architecture/web-apps/guides/reliable-web-app/java/apply-pattern
 - 
