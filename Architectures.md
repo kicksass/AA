@@ -116,3 +116,29 @@ Link: https://learn.microsoft.com/ko-kr/azure/architecture/guide/technology-choi
 복잡한 시나리오나 고성능이 요구되는 경우에는 RabbitMQ나 Kafka를 고려해볼 수 있습니다.
 서버리스 환경에서는 Azure Functions with Durable Functions가 적합합니다.
 이들 솔루션을 사용하면 동시성 이슈를 효과적으로 해결하면서도 시스템의 확장성과 안정성을 높일 수 있습니다.
+
+### 7. 마이크로서비스 아키텍처
+마이크로서비스 아키텍처의 모범 사례를 보여드리기 위해 드론 배달 애플리케이션이라는 참조 구현을 만들었습니다. 이 구현은 AKS(Azure Kubernetes Service)를 사용하여 Kubernetes에서 실행됩니다. 참조 구현은 GitHub에서 찾을 수 있습니다.
+![image](https://github.com/user-attachments/assets/ca072bcc-c3ef-42cb-bf53-56da6baf1f8b)
+
+1. 마이크로 서비스를 위한 Azure 컴퓨팅 옵션 선택(https://learn.microsoft.com/ko-kr/azure/architecture/microservices/design/compute-options)
+  - 서비스 오케스트레이터: AKS, Azure Container Apps, Service Fabric, Docker Enterprise Edition(IaaS)
+  - 컨테이너
+  - 서버리스(Function as a Service)
+
+2. 서비스 간 통신
+
+3. API 디자인
+
+4. API 게이트웨이
+
+5. 데이터 고려사항
+
+6. 컨테이너 오케스트레이션
+
+7. 마이크로서비스 디자인 패턴(https://learn.microsoft.com/ko-kr/azure/architecture/microservices/design/patterns)
+![image](https://github.com/user-attachments/assets/30e0c00a-95c0-4c83-923c-37e7ee09c1d2)
+
+8. 마이크로서비스 아키텍처로 마이그레이션
+  - DDD를 이용해 모놀리식 App을 마이크로서비스로 마이그레이션(https://learn.microsoft.com/ko-kr/azure/architecture/microservices/migrate-monolith)
+9. ...
