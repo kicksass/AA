@@ -110,7 +110,8 @@ Link: https://learn.microsoft.com/ko-kr/azure/architecture/guide/technology-choi
     - 고속 데이터 처리: 실시간으로 대규모 데이터를 빠르게 처리할 수 있습니다.
     - 확장성: 분산 아키텍처를 통해 시스템을 손쉽게 확장할 수 있습니다.
     - 실시간 스트리밍: 데이터 스트리밍과 로그 수집 등의 다양한 실시간 애플리케이션에 적합합니다.
-결론:
+
+**결론:**
 간단한 비동기 처리가 필요한 경우에는 Azure Queue Storage나 Azure Service Bus를 사용하는 것이 좋습니다.
 복잡한 시나리오나 고성능이 요구되는 경우에는 RabbitMQ나 Kafka를 고려해볼 수 있습니다.
 서버리스 환경에서는 Azure Functions with Durable Functions가 적합합니다.
