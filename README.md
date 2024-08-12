@@ -257,3 +257,5 @@ Azure Cost Management: 비용 관리를 위해 Azure Cost Management를 사용�
          - 분산 락 관리: 데이터베이스 내에서의 동시성 관리를 위해 락을 사용하지만, In-Memory OLTP를 통해 락 경합을 줄여 성능을 향상시킵니다.
 
 이와 같은 Azure 기반의 솔루션을 도입하면 A 고객사의 인증 및 세션 관리, 상품 관리 데이터 모델의 유연성, 그리고 동시성 이슈를 효과적으로 해결할 수 있습니다.
+
+test push
