@@ -2,17 +2,20 @@
 - Azure Advisor
 	- Azure Advisor는 Azure 리소스를 평가하고, 안정성, 보안 및 성능 개선, 운영 우수성 달성 및 비용 절감에 도움이 되는 권장 사항을 제공합니다.
 - Azure Monitor는 CPU 비율과 같은 메트릭 및 로깅 데이터를 수집하는 플랫폼입니다. 데이터는 자동 크기 조정을 트리거하는 데 사용될 수 있습니다.
+	- Application Insight는 Azure Monitor와 통합될 수 있다.
 - Azure Service Health
 	- 중단이 발생하면 Service Health는 RCA(근본 원인 분석)라는 공식 인시던트 보고서를 제공하며, 관련자와 공유할 수 있습니다.
 	- Service Health는 지역 전체 가동 중지 시간과 같은 Azure 관련 서비스 문제를 알려 줍니다.
 	- 영향을 받는 서비스, 지역 및 세부 정보로 드릴다운하여 이벤트가 미치는 영향과 수행해야 하는 작업을 표시할 수 있습니다. 이러한 이벤트의 대부분은 사용자에게 아무런 영향을 주지 않고 발생하며 표시되지 않습니다. 드물지만 재부팅이 필요한 경우 Service Health를 사용하면 유지 관리를 수행할 시기를 선택하여 가동 중지 시간을 최소화할 수 있습니다.
 - Log Analytics
+	- Log Analytics는 Azure Monitor와 통합될 수 있다.
 - Application Insights는 실행 중인 애플리케이션을 모니터링하고, 성능 변칙을 자동으로 검색하고, 기본 제공 분석 도구를 사용하여 사용자가 앱에서 수행하는 작업을 확인할 수 있는 Azure Monitor의 기능입니다.
 - 상태 공지는 서비스 사용 중지, 호환성이 손상되는 변경 등 서비스 사용 중지를 방지하기 위해 사전 작업을 수행해야 하는 문제입니다. 서비스 문제는 즉각적인 작업이 필요한 중단과 같은 문제입니다.
 - 서비스 엔드포인트는 Azure 서비스를 가상 네트워크에 노출하여 둘 사이의 통신을 제공하는 데 사용됩니다.
 - ExpressRoute는 온-프레미스 네트워크를 Azure에 연결하는 데 사용됩니다.
 - NSG를 사용하면 가상 네트워크 및 가상 머신에 대한 인바운드 및 아웃바운드 규칙을 구성할 수 있습니다.
 	- NSG적용 가능: VNet Subnet, Network Interface / 적용불가: VNet
+- 클라우드용 Microsoft Defende: 보안 점수 검토 가능
 - 피어링을 사용하면 가상 네트워크를 함께 연결할 수 있습니다.
 - 심층 방어 전략은 일련의 메커니즘을 사용하여 데이터에 대한 무단 액세스를 목표로 하는 공격의 진행 속도를 늦춥니다.
 - 조건부 액세스는 Microsoft Entra가 사용 중인 디바이스와 같은 ID 신호를 기반으로 리소스에 대한 액세스를 허용하거나 거부하는 데 사용하는 기능입니다.
@@ -39,6 +42,7 @@
 	- 여러 지역에 걸쳐 Azure 리소스를 복제할 수 있으므로 주 지역에서 재해가 발생할 경우 보조 지역을 사용할 수 있습니다.
 - 가용성 영역
 	- 가용성 영역은 Azure 지역 내에서 물리적으로 분리된 데이터 센터입니다.
+	- 모든 지역이 가용성 영역을 지원하지는 않음
 	- 각 가용성 영역은 독립된 전원, 냉각 및 네트워킹을 갖춘 하나 이상의 데이터 센터로 구성됩니다.
 - 가용성 집합
 - 데이터 센터
@@ -47,3 +51,13 @@
 - 탄력성은 자동 크기 조정을 활용하도록 클라우드 기반 앱을 구성할 수 있으므로 앱이 항상 필요한 리소스를 확보할 수 있음을 의미합니다.
 - 고가용성은 클라우드 기반 앱이 문제가 발생하는 경우에도 명백한 가동 중지 시간 없이 지속적인 사용자 환경을 제공할 수 있음을 의미합니다.
 - Azure 유료서비스의 최소 SLA는 99.9%
+- 스토리지 계정 이름: Azure 내에서 유일해야 한다(같은 이름 불가). (3~24길이의 숫자와 소문자로 구성)
+- (72) 스토리지 어카운트
+	- Azure Storage 계정에 복사 된 데이터는 항상 주 지역에서 3번 본제됨
+	- Azure Storage 계정에는 550TB공간과 Blob 혹은 파일 수는 제한이 없다.
+- (40) Microsoft Trust Center: provides in-depth information about security, privacy, compliance offerings, policies, and features across Microsoft cloud products
+	- Defender의 일부가 아님.
+- Azure SQL Database는 중지해서 비용을 절약할 수 없다(PaaS 서비스로 인스턴스를 중지할 수 없음)
+- Windows Server/SQL Server 라이선스가 SA(Serview Assueance) 방식이라면 Azure Virtual Machine에도 적용할 수 있다(Repurpose)
+- 구독
+	- 개별 구독은 단 한명의 계정 관리자(account administrator)를 갖는다.
