@@ -3,7 +3,9 @@
 	- Azure Advisor는 Azure 리소스를 평가하고, 안정성, 보안 및 성능 개선, 운영 우수성 달성 및 비용 절감에 도움이 되는 권장 사항을 제공합니다.
 - Azure Monitor는 CPU 비율과 같은 메트릭 및 로깅 데이터를 수집하는 플랫폼입니다. 데이터는 자동 크기 조정을 트리거하는 데 사용될 수 있습니다.
 	- Application Insight는 Azure Monitor와 통합될 수 있다.
-- Azure Service Health
+	- 온프레미스 컴퓨터 성능도 모니터링 가능함
+- Azure Status: 사용자와 무관하게 Azure 전체 서비스와 지역의 상태에 대한 실시간 개요/장애/중단 정보 제공
+- Azure Service Health(사용자 맞춤)
 	- 중단이 발생하면 Service Health는 RCA(근본 원인 분석)라는 공식 인시던트 보고서를 제공하며, 관련자와 공유할 수 있습니다.
 	- Service Health는 지역 전체 가동 중지 시간과 같은 Azure 관련 서비스 문제를 알려 줍니다.
 	- 영향을 받는 서비스, 지역 및 세부 정보로 드릴다운하여 이벤트가 미치는 영향과 수행해야 하는 작업을 표시할 수 있습니다. 이러한 이벤트의 대부분은 사용자에게 아무런 영향을 주지 않고 발생하며 표시되지 않습니다. 드물지만 재부팅이 필요한 경우 Service Health를 사용하면 유지 관리를 수행할 시기를 선택하여 가동 중지 시간을 최소화할 수 있습니다.
@@ -12,7 +14,7 @@
 - Application Insights는 실행 중인 애플리케이션을 모니터링하고, 성능 변칙을 자동으로 검색하고, 기본 제공 분석 도구를 사용하여 사용자가 앱에서 수행하는 작업을 확인할 수 있는 Azure Monitor의 기능입니다.
 - 상태 공지는 서비스 사용 중지, 호환성이 손상되는 변경 등 서비스 사용 중지를 방지하기 위해 사전 작업을 수행해야 하는 문제입니다. 서비스 문제는 즉각적인 작업이 필요한 중단과 같은 문제입니다.
 - 서비스 엔드포인트는 Azure 서비스를 가상 네트워크에 노출하여 둘 사이의 통신을 제공하는 데 사용됩니다.
-- ExpressRoute는 온-프레미스 네트워크를 Azure에 연결하는 데 사용됩니다.
+- ExpressRoute는 온-프레미스 네트워크를 Azure에 연결하는 데 사용됩니다(OSI 레이어 3(Network)에서 작동).
 - NSG를 사용하면 가상 네트워크 및 가상 머신에 대한 인바운드 및 아웃바운드 규칙을 구성할 수 있습니다.
 	- NSG적용 가능: VNet Subnet, Network Interface / 적용불가: VNet
 - 클라우드용 Microsoft Defende: 보안 점수 검토 가능
@@ -23,21 +25,31 @@
 - MFA는 로그인 프로세스 중에 사용자에게 추가 식별 양식을 묻는 메시지를 표시하는 프로세스입니다.
 - 하이브리드 ID 솔루션은 위치에 관계없이 모든 리소스에 대한 인증 및 권한 부여를 위한 공통 사용자 ID를 만듭니다.
 - RBAC
-	- Azure RBAC 역할은 액세스가 적용되는 리소스 또는 리소스 집합인 범위에 적용됩니다. 리소스 잠금은 실수로 리소스를 변경하거나 삭제하는 것을 방지합니다. 리소스 태그는 특정 워크로드, 환경, 사업부 및 소유자와 관련된 리소스를 찾고 조치를 취하는 데 사용됩니다. 정책은 리소스 구성 전체에 다양한 규칙을 적용하여 구성이 회사 표준을 계속 준수하도록 합니다.
+	- Azure RBAC 역할은 액세스가 적용되는 리소스 또는 리소스 집합인 범위에 적용됩니다.
+- 리소스 잠금(Locks)은 실수로 리소스를 변경하거나 삭제하는 것을 방지합니다.
+	- (175) 리소스는 Multiple delete lock 가능
+	- (175) Read-Only lock이 걸린 리소스에 Delete lock을 추가할 수 있다.
+- 리소스 태그(Tags)는 특정 워크로드, 환경, 사업부 및 소유자와 관련된 리소스를 찾고 조치를 취하는 데 사용됩니다.
+- 정책(Policy)은 리소스 구성 전체에 다양한 규칙을 적용하여 구성이 회사 표준을 계속 준수하도록 합니다.
 - 조건부 액세스는 신호를 사용하여 인증 시도에 대한 정보를 확인한 다음 액세스를 차단할지 또는 MFA와 같은 추가 확인이 필요한지 여부를 결정할 수 있습니다.
 - Azure Cost Management를 사용하면 리소스 수요 추세, 사용률 및 비용 패턴을 모니터링하여 비용 및 사용 예산을 만들고 관리할 수 있습니다. 또한 기록 데이터를 사용하여 보고서를 생성하고 향후 사용량과 지출을 예측할 수 있습니다
 - Azure Policy
-	- 개별 정책과 이니셔티브라고 하는 관련 정책 그룹을 모두 정의할 수 있습니다. Azure Policy는 리소스를 평가하고 만들어진 정책을 준수하지 않는 리소스를 강조 표시합니다. 또한 Azure Policy는 정책 미준수 리소스가 생성되지 않게 할 수도 있습니다.
+	- 개별 정책과 이니셔티브라고 하는 관련 정책 그룹을 모두 정의할 수 있습니다.
+	- Azure Policy는 리소스를 평가하고 만들어진 정책을 준수하지 않는 리소스를 강조 표시합니다. 
+	- Azure Policy는 정책 미준수 리소스가 생성되지 않게 할 수도 있습니다.
+	- VM에 적용할 수 있다.
 - ARM은 Azure용 배포 및 관리 서비스입니다. Azure 계정에서 리소스를 만들고, 업데이트하고, 삭제할 수 있는 관리 계층을 제공합니다.
 	- Azure 도구 또는 API의 요청을 수락하고 Azure 계정에서 리소스를 만들기, 업데이트 및 삭제할 수 있는 관리 계층은 무엇인가요?
-- Virtual Machine Scale Sets는 동일한 가상 머신 집합을 배포, 관리 및 크기 조정하는 데 사용할 수 있는 Azure 컴퓨팅 리소스입니다.
 - Microsoft Purview 거버넌스 포털 기능
 	- 데이터 카탈로그 –– 이를 통해 데이터 검색이 가능해집니다.
 	- 데이터 공유 –– 조직 내 및 조직 간에 데이터를 공유합니다.
 	- 데이터 자산 인사이트 –– 데이터 자산 상태에 액세스합니다.
 	- 데이터 정책 –– 이는 데이터에 대한 액세스를 관리합니다.
-- 지역
-- 지역 쌍
+- Virtual Machine Scale Sets는 동일한 가상 머신 집합을 배포, 관리 및 크기 조정하는 데 사용할 수 있는 Azure 컴퓨팅 리소스입니다.
+- 지역(Region)
+	- contains one or more data centers that are connected by using a low-latency network
+	- every Azure region has multiple datacenters
+- 지역 쌍(Region Pair)
 	- 각 Azure 지역은 300마일 이상 떨어져 있는 동일한 지리적 위치(예: 미국, 유럽 또는 아시아) 내의 다른 Azure 지역과 항상 쌍을 이룹니다.
 	- 여러 지역에 걸쳐 Azure 리소스를 복제할 수 있으므로 주 지역에서 재해가 발생할 경우 보조 지역을 사용할 수 있습니다.
 - 가용성 영역
@@ -50,14 +62,57 @@
 - 확장성은 RAM, CPU 또는 전체 가상 머신을 구성에 추가할 수 있음을 의미합니다.
 - 탄력성은 자동 크기 조정을 활용하도록 클라우드 기반 앱을 구성할 수 있으므로 앱이 항상 필요한 리소스를 확보할 수 있음을 의미합니다.
 - 고가용성은 클라우드 기반 앱이 문제가 발생하는 경우에도 명백한 가동 중지 시간 없이 지속적인 사용자 환경을 제공할 수 있음을 의미합니다.
-- Azure 유료서비스의 최소 SLA는 99.9%
+- SLA
+	- Azure 유료서비스의 최소 SLA는 99.9%
+	- AD Premium은 99.9% 보장
 - 스토리지 계정 이름: Azure 내에서 유일해야 한다(같은 이름 불가). (3~24길이의 숫자와 소문자로 구성)
 - (72) 스토리지 어카운트
 	- Azure Storage 계정에 복사 된 데이터는 항상 주 지역에서 3번 본제됨
 	- Azure Storage 계정에는 550TB공간과 Blob 혹은 파일 수는 제한이 없다.
 - (40) Microsoft Trust Center: provides in-depth information about security, privacy, compliance offerings, policies, and features across Microsoft cloud products
 	- Defender의 일부가 아님.
+- Azure Security Center
+	- (169) 회사의 regulatory compliance report를 볼 수 있다.
+	- (170) Azure Resource와 온프레미스 리소스를 모니터링 할 수 있다.
+	- (170) 유료 서비스임.
 - Azure SQL Database는 중지해서 비용을 절약할 수 없다(PaaS 서비스로 인스턴스를 중지할 수 없음)
 - Windows Server/SQL Server 라이선스가 SA(Serview Assueance) 방식이라면 Azure Virtual Machine에도 적용할 수 있다(Repurpose)
 - 구독
 	- 개별 구독은 단 한명의 계정 관리자(account administrator)를 갖는다.
+	- 하나의 구독은 여러 AD 테넌트와 연결할 수 없다.
+	- 구독과 연결한 테넌트는 변경할 수 있다.
+- Azure AD
+	- Group policy는 AAD가 아닌 ADDS 대상임
+	- Android device는 join 불가 ==> Register 가능
+	- Azure AD 그룹은 비용과 무관하다.
+- Azure Sphere vs IoT Hub vs IoT Central
+	- Azure Sphere: 보안 IoT 플랫폼. 디바이스를 안전하게 연결, 관리, 보호
+	- IoT Hub: PaaS. communition hub
+	- IoT Central: SaaS. 모든 장치 데이터를 모으는 플랫폼. 연결/모니터링/장치관리.
+- Storage account
+	- IaaS 서비스임.
+- Storage account tiers
+	- Archive
+		- must be rehydrated before the data can be accessed(액세스 전 재수화 필요)
+	- Cool
+	- Hot
+- Azure Data Box: 대량 데이터를 빠르고 저렴하게 마이그하기위한 물리적 마이그레이션 서비스
+- Azure Reservation
+	- Reserved VM Instance는 최대 3년 기간으로 구매할 수 있다.
+	- 특정 데이터 센터를 지정하지 않
+- Azure Site Recovery는 재해복구 DR 솔루션이다.
+- Azure Firewall
+	- NAT를 이용하면 인터넷 사용자가 가상 네트워크 서버에 액세스할 수 있다.
+	- 여러 구독 및 vnet에서 네트워크 필터링 제공
+- Budget Alerts: 예상보다 비용이 오버됐을 때 알림 발송
+- [Azure Databricks] is an Apache Spark-based analytics service.
+- Azure HDInsight: Open-source
+- Azure Data Lake Analytics: Massive
+- Azure Synapse Analytice: Massive & Relational
+- Private Preview
+	- 일부 고객에게 제공
+- Public Preview
+	- 전체 고객에게 제공
+	- SLA 적용 대상이 아님
+	- production에서 사용 가능
+- Azure 센티넬: Azure AD에서 보안 이벤트를 수집하고 자동으로 분석
