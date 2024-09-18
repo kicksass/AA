@@ -1,4 +1,10 @@
 #### AZ-900 문제
+--------------------------------------------------------------------------
+-검색방법
+	- https://github.com/Ditectrev/Microsoft-Azure-AZ-900-Microsoft-Azure-Fundamentals-Practice-Tests-Exams-Questions-Answers?tab=readme-ov-file#azure-government-is-available-only-to-us-government-agencies-and-their-partners
+	- Google "examtopics az-900" + 질의 키워드
+	- ChatGPT 활용
+--------------------------------------------------------------------------
 - Azure Advisor
 	- Azure Advisor는 Azure 리소스를 평가하고, 안정성, 보안 및 성능 개선, 운영 우수성 달성 및 비용 절감에 도움이 되는 권장 사항을 제공합니다.
 - Azure Monitor는 CPU 비율과 같은 메트릭 및 로깅 데이터를 수집하는 플랫폼입니다. 데이터는 자동 크기 조정을 트리거하는 데 사용될 수 있습니다.
