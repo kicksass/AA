@@ -1,0 +1,30 @@
+Azure AI-900
+----------------------------
+- Azure Machine Learning Studio
+- Computer Vision
+  . Azure AI Vision
+    .. Azure Vision Studio
+- 자연어 처리
+  . Azure AI 음성: Azure Speech Studio
+  . Azure AI 언어: Azure Language Studio
+- Document Intelligence
+  . Document Intelligence Studio
+- 지식 마이닝: 대량의 비정형 데이터에 정보 추출 >> 검색가능한 저장소
+- Azure AI Search
+- 생성형 AI
+  . Azure OpenAI Service
+- Machine Learning
+  . 학습: 데이터를 통해 함수를 정의하는 프로세스
+    .. 데이터: 기능(x1, x2, ...) = 레이블(y)
+  . 추론: 정의한 함수를 이용해 새로운 값을 예
+  . 분류
+    .. Supervised ML: 기능 값과 레이블 값이 모두 포함된 경우
+      ... 회귀(Regression): 예측한 레이블이 숫자 값인 한 형태
+        .... 날씨 상태에 따른 아이스크림 판매량 예측 등
+      ... 분류(Classification)
+        .... 이진 분류: 위험성 존재 여부 판단 등
+        .... 다중 클래스 분류: 펭귄의 종, 영화 장르 판단 등
+    .. Unsupervised ML: 알려진 레이블 없이 기능 값만으로 학습
+      ... 클러스터링(Clustering)
+        .... 유사한 꽃 그룹화, 고객 그룹화
+        .... 다중 클래스 분류와 유사하지만, 레이블 없이 학습한다는 차이가 있음.
